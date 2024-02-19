@@ -1,0 +1,194 @@
+/* VARIABLES */
+:root {
+	--ff-body: "Karla", sans-serif;
+
+	--clr-primary-400: #8d5c43;
+	--clr-light: #fff;
+	--clr-dark-300: #312f2d;
+	--clr-dark-400: #2b2521;
+	--clr-grey-300: #f9fafb;
+	--clr-grey-400: #d4d9dd;
+	--clr-red: #b91c1c;
+	--clr-blue: #1d4ed8;
+
+	--font-size-200: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+	--font-size-300: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+	--font-size-400: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+	--font-size-500: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+	--font-size-600: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+	--font-size-700: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+	--font-size-800: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+	--font-size-900: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+
+	--box-shadow-1: 0px 14px 21px -3px rgba(194, 194, 194, 0.5);
+	--box-shadow-2: 0px 3px 5px 0px rgb(132, 132, 132);
+	--border-radius: 8px;
+}
+
+/* GENERAL STYLES */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--ff-body);
+	font-size: var(--font-size-400);
+	background-color: var(--clr-grey-300);
+	color: var(--clr-dark-400);
+	min-height: 100vh;
+
+	display: flex;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 1px solid currentColor;
+}
+
+/* ASIDE SECTION */
+aside {
+	width: 35%;
+	background: url(imgs/background-shore.jpg) no-repeat center/cover;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+aside .logo-container {
+	background: rgb(0, 0, 0, 0.4);
+	width: 100%;
+	margin-top: 15rem;
+	padding: 2rem 0;
+
+	display: flex;
+	justify-content: center;
+}
+
+aside .logo {
+	width: 8rem;
+}
+
+aside .bg-credit {
+	color: var(--clr-light);
+	font-size: var(--font-size-300);
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+/* MAIN SECTION */
+main {
+	width: 65%;
+}
+
+/* --Top Text-- */
+
+main .top-text {
+	width: min(90%, 58rem);
+	margin: 10rem 3rem 5rem;
+	padding-right: 2rem;
+	font-size: var(--font-size-600);
+	font-weight: 300;
+}
+
+main .top-text p:nth-child(2) {
+	margin-top: 0.5rem;
+}
+main .top-text p:nth-child(3) {
+	margin-top: 2.5rem;
+}
+
+/* --Form-- */
+main .form-wrapper {
+	background: var(--clr-light);
+	box-shadow: var(--box-shadow-1);
+	padding: 2rem 0 3rem 3rem;
+}
+
+main .sign-up-form .form-infos {
+	border: none;
+	width: min(90%, 45rem);
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem 4rem;
+}
+
+main .sign-up-form .form-infos-description {
+	font-size: var(--font-size-600);
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+}
+
+main .sign-up-form .input-wrapper {
+	width: 40%;
+
+	display: flex;
+	flex-direction: column;
+}
+
+main .sign-up-form input {
+	margin-top: 0.5rem;
+	padding: 0.3rem 0.5rem;
+	border-radius: 5px;
+	border: 1px solid var(--clr-grey-400);
+}
+
+main .sign-up-form label {
+	font-size: var(--font-size-200);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+/* --Form Btn-- */
+main .sign-up-form .form-btn {
+	display: inline-block;
+	cursor: pointer;
+	background: var(--clr-primary-400);
+	color: var(--clr-light);
+	font-weight: 700;
+	margin: 2.5rem 3rem 0;
+	padding: 0.7em 2.5em;
+	border: none;
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow-2);
+	transition: transform 0.2s ease-in;
+}
+
+main .sign-up-form .form-btn:hover {
+	transform: scale(1.06);
+}
+
+main .sign-up-form .form-btn:active {
+	opacity: 0.9;
+}
+
+/* --Bottom Text0-- */
+main .bottom-text {
+	font-weight: 500;
+	margin: 3rem;
+}
+
+main .bottom-text .log-in-btn {
+	color: var(--clr-primary-400);
+	font-weight: 700;
+	border: none;
+}
+
+main .bottom-text .log-in-btn:hover {
+	text-decoration: 1px underline;
+}

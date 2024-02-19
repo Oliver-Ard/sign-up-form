@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+			rel="stylesheet" />
+		<link rel="icon" href="imgs/favicon.png" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Sign-up Form</title>
+	</head>
+	<body>
+		<aside>
+			<div class="logo-container">
+				<img
+					class="logo"
+					src="imgs/logo-wave-catcher.png"
+					alt="Brand Logo: 'Wave Catcher'" />
+			</div>
+			<p class="bg-credit">
+				Photo by
+				<a
+					href="https://unsplash.com/@julie_soul"
+					target="_blank"
+					rel="noreferrer noopener"
+					>Julia Solonina</a
+				>
+				on
+				<a
+					href="https://unsplash.com/"
+					target="_blank"
+					rel="noreferrer noopener"
+					>Unsplash</a
+				>
+			</p>
+		</aside>
+
+		<main>
+			<div class="top-text">
+				<p>
+					This is not a real online service! You know you need something like
+					this in your life to help you realize your deepest dreams.
+				</p>
+				<p>Sign up <em>now</em> to get started.</p>
+				<p>You <em>know</em> you want to.</p>
+			</div>
+
+			<form class="sign-up-form" action="#" method="post">
+				<div class="form-wrapper">
+					<fieldset class="form-infos">
+						<legend class="form-infos-description">Let's do this!</legend>
+						<div class="input-wrapper">
+							<label for="first-name">First Name</label>
+							<input type="text" id="first-name" name="first-name" />
+						</div>
+						<div class="input-wrapper">
+							<label for="last-name">Last Name</label>
+							<input type="text" id="last-name" name="last-name" />
+						</div>
+						<div class="input-wrapper">
+							<label for="email">Email</label>
+							<input type="email" id="email" name="email" />
+						</div>
+						<div class="input-wrapper">
+							<label for="phone-number">Phone Number</label>
+							<input type="tel" id="phone-number" name="phone-number" />
+						</div>
+						<div class="input-wrapper">
+							<label for="password">Password</label>
+							<input type="password" id="password" name="password" />
+						</div>
+						<div class="input-wrapper">
+							<label for="conf-password">Confirm Password</label>
+							<input type="password" id="conf-password" name="conf-password" />
+						</div>
+					</fieldset>
+				</div>
+				<button class="form-btn" type="button">Create Account</button>
+			</form>
+
+			<p class="bottom-text">
+				Already have an account? <a href="#" class="log-in-btn">Log in</a>
+			</p>
+		</main>
+	</body>
+</html>
