@@ -10,6 +10,7 @@
 			rel="stylesheet" />
 		<link rel="icon" href="imgs/favicon.png" />
 		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
 		<title>Sign-up Form</title>
 	</head>
 	<body>
@@ -53,32 +54,97 @@
 					<fieldset class="form-infos">
 						<legend class="form-infos-description">Let's do this!</legend>
 						<div class="input-wrapper">
-							<label for="first-name">First Name</label>
-							<input type="text" id="first-name" name="first-name" />
+							<label for="user-first-name"
+								>First Name<strong>
+									<span class="required-label" aria-label="required">*</span>
+								</strong></label
+							>
+							<input
+								type="text"
+								id="user-first-name"
+								name="user-first-name"
+								placeholder="John"
+								required
+								minlength="2"
+								maxlength="24"
+								pattern="^[a-zA-Z\s\-]+$" />
 						</div>
 						<div class="input-wrapper">
-							<label for="last-name">Last Name</label>
-							<input type="text" id="last-name" name="last-name" />
+							<label for="user-last-name"
+								>Last Name<strong>
+									<span class="required-label" aria-label="required">*</span>
+								</strong></label
+							>
+							<input
+								type="text"
+								id="user-last-name"
+								name="user-last-name"
+								placeholder="Doe"
+								required
+								minlength="2"
+								maxlength="24"
+								pattern="^[a-zA-Z\s\-]+$" />
 						</div>
 						<div class="input-wrapper">
-							<label for="email">Email</label>
-							<input type="email" id="email" name="email" />
+							<label for="user-email"
+								>Email<strong>
+									<span class="required-label" aria-label="required">*</span>
+								</strong></label
+							>
+							<input
+								type="email"
+								id="user-email"
+								name="user-email"
+								placeholder="john.doe20@example.com"
+								required
+								pattern="^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$" />
 						</div>
 						<div class="input-wrapper">
-							<label for="phone-number">Phone Number</label>
-							<input type="tel" id="phone-number" name="phone-number" />
+							<label for="user-phone-number"
+								>Phone Number<strong>
+									<span class="required-label" aria-label="required">*</span>
+								</strong></label
+							>
+							<input
+								type="tel"
+								id="user-phone-number"
+								name="user-phone-number"
+								placeholder="123 456 7890"
+								required
+								max="10"
+								maxlength="18"
+								pattern="^(\(\d{3}\)?|\d{3}-?|\d{3}?)?\d{3}?-?\d{4}$" />
 						</div>
 						<div class="input-wrapper">
-							<label for="password">Password</label>
-							<input type="password" id="password" name="password" />
+							<label for="user-password"
+								>Password<strong>
+									<span class="required-label" aria-label="required">*</span>
+								</strong></label
+							>
+							<input
+								type="password"
+								id="user-password"
+								name="user-password"
+								required
+								minlength="8" />
+							<p class="error-input"></p>
 						</div>
 						<div class="input-wrapper">
-							<label for="conf-password">Confirm Password</label>
-							<input type="password" id="conf-password" name="conf-password" />
+							<label for="user-conf-password"
+								>Confirm Password<strong>
+									<span class="required-label" aria-label="required">*</span>
+								</strong></label
+							>
+							<input
+								type="password"
+								id="user-conf-password"
+								name="user-conf-password"
+								required
+								minlength="8" />
 						</div>
 					</fieldset>
 				</div>
-				<button class="form-btn" type="button">Create Account</button>
+				<button class="form-btn">Create Account</button>
 			</form>
 
 			<p class="bottom-text">

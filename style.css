@@ -9,7 +9,7 @@
 	--clr-grey-300: #f9fafb;
 	--clr-grey-400: #d4d9dd;
 	--clr-red: #b91c1c;
-	--clr-blue: #1d4ed8;
+	--clr-green: #5bbf1d;
 
 	--font-size-200: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
 	--font-size-300: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
@@ -21,7 +21,7 @@
 	--font-size-900: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
 
 	--box-shadow-1: 0px 14px 21px -3px rgba(194, 194, 194, 0.5);
-	--box-shadow-2: 0px 3px 5px 0px rgb(132, 132, 132);
+	--box-shadow-2: 0px 3px 5px 0px rgb(162, 160, 160, 0.6);
 	--border-radius: 8px;
 }
 
@@ -140,18 +140,41 @@ main .sign-up-form .input-wrapper {
 	flex-direction: column;
 }
 
+main .sign-up-form label {
+	font-size: var(--font-size-200);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+main .sign-up-form .required-label {
+	color: var(--clr-red);
+	font-size: var(--font-size-400);
+}
+
 main .sign-up-form input {
+	background: transparent;
 	margin-top: 0.5rem;
 	padding: 0.3rem 0.5rem;
 	border-radius: 5px;
 	border: 1px solid var(--clr-grey-400);
 }
 
-main .sign-up-form label {
+main .sign-up-form input:focus {
+	outline: 0;
+	border: 1px solid var(--clr-green);
+	box-shadow: var(--box-shadow-2);
+}
+
+main .sign-up-form input:focus:invalid {
+	border: 1px solid var(--clr-red);
+}
+
+main .sign-up-form .error-input {
 	font-size: var(--font-size-200);
 	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+	color: var(--clr-red);
+	margin-top: 0.5rem;
 }
 
 /* --Form Btn-- */
@@ -191,4 +214,10 @@ main .bottom-text .log-in-btn {
 
 main .bottom-text .log-in-btn:hover {
 	text-decoration: 1px underline;
+}
+
+/* JS CLASSES */
+#user-password.error,
+#user-conf-password.error {
+	border: 1px solid var(--clr-red);
 }
