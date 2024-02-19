@@ -221,3 +221,28 @@ main .bottom-text .log-in-btn:hover {
 #user-conf-password.error {
 	border: 1px solid var(--clr-red);
 }
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 900px) {
+	main .top-text {
+		margin: 4rem 3rem 5rem;
+	}
+
+	main .sign-up-form .input-wrapper {
+		width: 70%;
+	}
+}
+
+@media only screen and (max-width: 780px) {
+	aside {
+		display: none;
+	}
+
+	main {
+		width: 100%;
+	}
+
+	main .sign-up-form .input-wrapper {
+		width: 80%;
+	}
+}
